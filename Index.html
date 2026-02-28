@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gandhi - Verificador de Pagos</title>
+    <style>
+        /* Estilo Gandhi: Limpio y funcional */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
+        .header { background: #FFD700; padding: 15px; text-align: center; font-weight: bold; border-bottom: 2px solid #000; }
+        
+        /* El contenedor que hace la magia */
+        .iframe-container {
+            width: 100%;
+            height: calc(100% - 50px);
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Aquí forzamos un zoom visual si el sitio no es responsivo */
+            transform: scale(1.2); 
+            transform-origin: 0 0;
+            width: 83.33%; /* Ajuste proporcional al scale para que no se salga de la pantalla */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">LECTOR DE PAGOS GANDHI</div>
+    <div class="iframe-container">
+        <iframe src="http://ldi.me/ldi/report/login/" title="Portal de Pagos"></iframe>
+    </div>
+</body>
+</html>
